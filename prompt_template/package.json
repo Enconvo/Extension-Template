@@ -1,0 +1,87 @@
+{
+  "$schema": "https://enconvo.com/schemas/extension.json",
+  "name": "prompt_template",
+  "version": "0.0.1",
+  "description": "Show how to create a Prompt extension.",
+  "title": "Prompt Template",
+  "icon": "icon.png",
+  "author": "EnconvoAI",
+  "categories": [
+    "Chat"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "commands": [
+    {
+      "name": "command_prompt_template",
+      "icon": "icon.png",
+      "title": "Command Prompt Template",
+      "description": "Show how to create a Prompt extension.",
+      "mode": "no-view",
+      "targetCommand": "chat_with_ai/command",
+      "preferences": [
+        {
+          "name": "prompt",
+          "description": "The prompt used to generate responses",
+          "type": "textfield",
+          "required": false,
+          "default": "Suggest a  emoji that relate to the text. Only respond with the most relative emoji.\n\nText: {text}\nEmoji:",
+          "title": "Prompt"
+        },
+        {
+          "name": "llm",
+          "description": "The model used to generate responses",
+          "type": "extension",
+          "required": false,
+          "default": "default",
+          "title": "LLM Provider"
+        }
+      ]
+    },
+    {
+      "name": "chat_prompt_template",
+      "icon": "icon.png",
+      "title": "Chat Prompt Template",
+      "description": "Show how to create a Chat Prompt extension.",
+      "mode": "no-view",
+      "targetCommand": "chat_with_ai/chat_command",
+      "preferences": [
+        {
+          "name": "prompt",
+          "description": "The prompt used to generate responses",
+          "type": "textfield",
+          "required": false,
+          "default": "You are the happiest person in the world, reply to me happily",
+          "title": "Prompt"
+        },
+        {
+          "name": "llm",
+          "description": "The model used to generate responses",
+          "type": "extension",
+          "required": false,
+          "default": "default",
+          "title": "LLM Provider"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@enconvo/api": "^0.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.14",
+    "@types/react": "18.2.27",
+    "eslint": "^8.33.0",
+    "prettier": "^2.8.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "npm run lint --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "format:check": "prettier --list-different \"**/*.ts\"",
+    "build": "enconvo",
+    "dev": "enconvo --dev"
+  }
+}
