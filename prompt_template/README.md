@@ -1,13 +1,7 @@
-# UnixTime
-
+# Prompt Template
 
 ## What is this?
 
-This is an Enconvo Extension that helps you convert between Unix Time and Human Readable Time.
 
+This is a template used to create Prompt plugins.
 
-## How to use it?
-![](https://raw.githubusercontent.com/Enconvo/Unixtime-Converter/main/metadata/Screenshot.png)
-
-## Installation
-https://store.enconvo.com/plugins/Unixtime-Converter
