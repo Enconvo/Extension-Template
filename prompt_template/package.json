@@ -35,6 +35,22 @@
           "required": false,
           "default": "default",
           "title": "LLM Provider"
+        },
+        {
+          "name": "auto_audio_play",
+          "description": "Automatically play result content",
+          "type": "checkbox",
+          "required": false,
+          "title": "Automatically Play TTS Audio",
+          "default": false
+        },
+        {
+          "name": "tts_providers",
+          "description": "The TTS provider to use.",
+          "type": "extension",
+          "required": false,
+          "default": "default",
+          "title": "TTS Provider"
         }
       ]
     },
@@ -61,20 +77,36 @@
           "required": false,
           "default": "default",
           "title": "LLM Provider"
+        },
+        {
+          "name": "auto_audio_play",
+          "description": "Automatically play result content",
+          "type": "checkbox",
+          "required": false,
+          "title": "Automatically Play TTS Audio",
+          "default": false
+        },
+        {
+          "name": "tts_providers",
+          "description": "The TTS provider to use.",
+          "type": "extension",
+          "required": false,
+          "default": "default",
+          "title": "TTS Provider"
         }
       ]
     }
   ],
   "dependencies": {
-    "@enconvo/api": "^0.1.4"
+    "@enconvo/api": "^0.1.127"
   },
   "devDependencies": {
-    "@types/node": "^18.17.14",
+    "@types/node": "^18.19.33",
     "@types/react": "18.2.27",
-    "eslint": "^8.33.0",
-    "prettier": "^2.8.3",
+    "eslint": "^8.57.0",
+    "prettier": "^2.8.8",
     "tsup": "^7.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "lint": "eslint src",
